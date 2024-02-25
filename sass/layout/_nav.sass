@@ -1,0 +1,95 @@
+.main-nav
+    background: $white
+    position: absolute
+    left: 100%
+    right: 0
+    top: 0
+    z-index: 555
+    overflow: hidden
+    transition: all ease-in-out 250ms
+    opacity: 0
+    @media (min-width: 1000px)
+        opacity: 100%
+        left: 0
+        background: none
+        margin-right: 2em
+        margin-top: .5em
+
+    ul
+        display: flex
+        flex-direction: column
+        height: 60vh
+        padding-top: 60px
+        @media(min-width: 1000px)
+            flex-direction: row
+            height: auto
+            padding-top: 15px
+
+    li
+        flex: 1 1 auto
+        display: flex
+        opacity: 0
+        &.is-open
+            opacity: 100%
+        @media(min-width: 1000px)
+            opacity: 100%
+
+    a
+        flex-basis: 100%
+        display: flex
+        justify-content: left
+        padding-left: 30px
+        align-items: center
+
+        @media (min-width: 1000px)
+            flex-basis: auto
+
+        &:hover
+            background: $accent
+            @media (min-width: 1000px)
+                background: none
+                color: darken($hero-text, 15%)
+        &:active
+            color: $white
+
+    &.is-open
+        left: 20%
+        opacity: 98%
+
+    @media (min-width: 560px)
+        &.is-open
+            left: 50%
+    @media (min-width: 1000px)
+        left: 30%
+
+// Hamburger Menu
+
+.nav-toggle
+    cursor: pointer
+    z-index: 556
+    margin: auto
+    @media (min-width: 1000px)
+        display: none
+
+.hamburger, .hamburger::before, .hamburger::after
+    content: ''
+    display: block
+    width: 1.5em
+    height: 3px
+    background: $secondary
+    transition: all ease-in-out 250ms
+
+.hamburger::before
+    transform: translateY(-6px)
+
+.hamburger::after
+    transform: translateY(3px)
+
+.hamburger.is-open
+    transform: rotate(-45deg)
+
+    &::after
+        transform: rotate(90deg) translateX(-3px)
+
+    &::before
+        opacity: 0

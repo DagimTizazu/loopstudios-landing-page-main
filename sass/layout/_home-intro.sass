@@ -1,0 +1,84 @@
+.motto-container
+    background: $banner-background
+    width: 100%
+    margin-bottom: 1.5em
+    @media (min-width: 1400px)
+        width: 80%
+        margin: 0 auto 3em auto
+        border-bottom-left-radius: 20em
+        border-bottom-right-radius: 20em
+        border: 2px solid lighten($banner-background, 5%)
+        border-top: none
+
+.intro-motto
+    padding: 2rem 1rem 0.3rem 3rem
+    margin: auto
+    background-image: url(../img/bg-pattern-quotation.svg), url(../img/bg-pattern-quotation-flipped.svg)
+    background-repeat: no-repeat
+    background-position: 1% 5%, 98% 5%
+    background-size: 2rem
+    @media (min-width: 620px)
+        width: 80%
+    @media (min-width: 700px)
+        width: 70%
+    @media(min-width: 1200px)
+        width: 60%
+        padding: 2rem 1rem 0.3rem 3rem
+
+.who-title
+    text-align: left
+    margin-top: 1em
+
+.grid-container
+    @media(min-width: 450px)
+        display: grid
+        grid-template-columns: auto auto
+        margin: 0
+        width: 100%
+        gap: 10px
+        padding: 1em 0 2em 0
+    @media(min-width: 800px)
+        max-height: 400px
+        padding: 2em 4em
+        gap: 0
+    @media(min-width: 900px)
+        max-height: 600px
+        padding: 2em 8em
+    @media(min-width: 1200px)
+        padding: 2em 14em
+
+.intro-img
+    width: 100%
+    display: block
+    margin: 0 auto
+    padding-right: 15px
+    @media(min-width: 450px)
+        grid-area: 1 / 1 / span 2 / 1
+        display: flex
+        align-items: center
+        justify-content: center
+        margin: auto
+        padding: 0
+        border-radius: 50%
+    @media(min-width: 800px)
+        max-height: 300px
+        width: 90%
+
+    @media(min-width: 1100px)
+        max-height: 400px
+    @media(min-width: 1200px)
+        width: 70%
+
+.intro-container
+    width: 90%
+    max-width: 1200px
+    margin: 0 auto
+    @media(min-width: 450px)
+        display: flex
+        align-items: center
+        justify-content: center
+
+.intro-paragraph
+    margin: 1.5rem 0
+    @media(min-width: 450px)
+        margin: auto
