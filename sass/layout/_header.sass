@@ -1,24 +1,20 @@
-.header-container
-    width: 94%
-    margin: auto
-    display: grid
-    grid-template-columns: auto auto
-    justify-content: space-between
-    padding: 10px
-
-.main-header
-    position: sticky
+header
+    position: absolute
+    z-index: 2
+    width: 100%
     top: 0
-    left: 0
+    left: 0 
     right: 0
-    background: $fourth
-    z-index: 400
 
-.shadow-class
-    box-shadow: -1px 1px 20px transparentize($black, 0.7)
+.header__container
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 35px 25px
+    margin: 0 auto
 
 .logo
-    min-width: 8rem
-    padding-top: 4px
-    @media (min-width: 1000px)
-        min-width: 12rem
+    width: 140px
+    position: relative
+    padding-top: 5px
+    z-index: 900

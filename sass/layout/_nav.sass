@@ -1,95 +1,61 @@
 .main-nav
-    background: $white
+    background: $black
     position: absolute
+    top: 0
     left: 100%
     right: 0
-    top: 0
-    z-index: 555
-    overflow: hidden
-    transition: all ease-in-out 250ms
+    width: 0
+    height: 100vh
     opacity: 0
-    @media (min-width: 1000px)
-        opacity: 100%
-        left: 0
-        background: none
-        margin-right: 2em
-        margin-top: .5em
-
+    overflow: hidden
+    z-index: 30
+    transition: all ease-in-out 250ms
     ul
         display: flex
         flex-direction: column
-        height: 60vh
-        padding-top: 60px
-        @media(min-width: 1000px)
-            flex-direction: row
-            height: auto
-            padding-top: 15px
-
-    li
-        flex: 1 1 auto
-        display: flex
-        opacity: 0
-        &.is-open
-            opacity: 100%
-        @media(min-width: 1000px)
-            opacity: 100%
-
-    a
-        flex-basis: 100%
-        display: flex
-        justify-content: left
-        padding-left: 30px
-        align-items: center
-
-        @media (min-width: 1000px)
-            flex-basis: auto
-
-        &:hover
-            background: $accent
-            @media (min-width: 1000px)
-                background: none
-                color: darken($hero-text, 15%)
-        &:active
-            color: $white
-
+        gap: 12px
+        padding: 205px 0 0 23px
+        width: 100%
+        li
+            a
+                color: $white
+                font:
+                    family: $second-font
+                    size: 1.4em
+                text-transform: uppercase
     &.is-open
-        left: 20%
-        opacity: 98%
-
-    @media (min-width: 560px)
-        &.is-open
-            left: 50%
-    @media (min-width: 1000px)
-        left: 30%
+        left: 0
+        width: 100%
+        opacity: 90%
+        
 
 // Hamburger Menu
-
 .nav-toggle
     cursor: pointer
     z-index: 556
-    margin: auto
-    @media (min-width: 1000px)
-        display: none
-
+    
 .hamburger, .hamburger::before, .hamburger::after
     content: ''
     display: block
-    width: 1.5em
-    height: 3px
-    background: $secondary
+    width: 1.4em
+    height: .12em
+    background: $white
     transition: all ease-in-out 250ms
 
 .hamburger::before
     transform: translateY(-6px)
 
 .hamburger::after
-    transform: translateY(3px)
+    transform: translateY(4px)
 
 .hamburger.is-open
     transform: rotate(-45deg)
 
     &::after
-        transform: rotate(90deg) translateX(-3px)
+        transform: rotate(90deg) translateX(-2px)
 
     &::before
         opacity: 0
+
+    
+    

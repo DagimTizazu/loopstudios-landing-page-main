@@ -1,41 +1,23 @@
 *, *::before, *::after
     box-sizing: border-box
 
-body
-    color: $text-main
-    background: #6B818C
-    //#6B818C
-    //#668586
-    //#508484
-
-.icon-container
-    display: inline-block
-    background: darken($fourth, 10%)
-    max-width: 5vh
-    height: 5vh
-    margin-bottom: .5rem
-    border-radius: 50%
-    box-shadow: -2px 2px 7px $black
-
-.icon
-    max-width: 4.5vh
-    height: auto
-    margin: auto
-
-.container
-    width: 90%
-    max-width: 1200px
-    margin: 0 auto
-
-.unstyled-list, .social-links, .address
+*
     margin: 0
-    padding: 0
-    list-style: none
 
-.unordered-list
-    text-align: left
-    margin-top: 0
-    li::before
-        content: "♦ "
-        color: #FFBA49
-        font-size: .9em
+body
+    line-height: 1.5
+    -webkit-font-smoothing: antialiased
+    background: $white
+    color: $black
+    font-family: $main-font
+    
+ul
+    list-style-type: none
+    padding: 0
+
+a
+    text-decoration: none
+    color: inherit
+
+button
+    font: inherit

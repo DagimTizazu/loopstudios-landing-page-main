@@ -69,9 +69,7 @@ To see how you can add code snippets, see below:
 <h1>Some HTML code I'm proud of</h1>
 ```
 ```css
-.proud-of-this-css {
-  color: papayawhip;
-}
+background-image: linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0)), url('../images/mobile/image-deep-earth.jpg')
 ```
 ```js
 const proudOfThisFunc = () => {

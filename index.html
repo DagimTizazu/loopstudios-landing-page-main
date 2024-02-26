@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="sass/main.css">
   
   <title>Frontend Mentor | Loopstudios landing page</title>
   
@@ -14,19 +15,19 @@
   <!--Header and Navigation
   ====================================-->
 
-  <header class="header">
+  <header>
 
     <div class="header__container">
 
-      <a class="logo" href="index.html"><img src="images/logo.svg" alt="logo"></a>
+      <a href="index.html"><img class="logo" src="images/logo.svg" alt="logo"></a>
 
       <div class="nav-toggle">
-        <div class="hamburger-menu"></div>
+        <div class="hamburger"></div>
       </div>
 
     </div>
 
-    <nav>
+    <nav class="main-nav">
         <ul class="nav-list">
           <li class="nav-items"><a href="index.html">About</a></li>
           <li class="nav-items"><a href="index.html">Careers</a></li>
@@ -54,7 +55,7 @@
 
   <section class="intro-section">
 
-    <img src="images/mobile/image-interactive.jpg" alt="guy with a vr headset">
+    <img class="intro__img" src="images/mobile/image-interactive.jpg" alt="guy with a vr headset">
     
     <div class="intro__txt-container">
       <h2 class="intro-title">The leader in interactive VR</h2>
@@ -71,6 +72,7 @@
 <main class="creation__wrapper">
   <h2 class="creation__title">Our creations</h2>
   
+  <div class="creation__items-container">
   <div class="creation__items">
     <h3 class="creation__items-title">Deep earth</h3>
   </div>
@@ -95,6 +97,7 @@
   <div class="creation__items">
     <h3 class="creation__items-title">Make it fisheye</h3>
   </div>
+</div>
 
   <button class="creation__see-button">See all</button>
 
@@ -105,7 +108,7 @@
 
   <footer>
 
-    <a class="logo footer__logo" href="index.html"><img src="images/logo.svg" alt="logo"></a>
+    <a href="index.html"><img class="footer__logo" src="images/logo.svg" alt="logo"></a>
     
     <ul class="footer_nav-list">
       <li class="footer_nav-items"><a href="index.html">About</a></li>
@@ -115,9 +118,23 @@
       <li class="footer_nav-items"><a href="index.html">Support</a></li>
     </ul>
 
+    <ul class="footer_social-links">
+      <li class="social-items"><a href="index.html"><img src="images/icon-facebook.svg" alt="facebook"></a></li>
+      <li class="social-items"><a href="index.html"><img src="images/icon-twitter.svg" alt="twitter"></a></li>
+      <li class="social-items"><a href="index.html"><img src="images/icon-pinterest.svg" alt="pinterest"></a></li>
+      <li class="social-items"><a href="index.html"><img src="images/icon-instagram.svg" alt="instagram"></a></li>
+    </ul>
+
     <p class="copyright">© 2021 Loopstudios. All rights reserved.</p>
 
   </footer>
+
+  <!--jquery-->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" 
+  crossorigin="anonymous"></script>
+
+  <!--My own scripts-->
+  <script src="js/scripts.js"></script>
   
 </body>
 </html>
