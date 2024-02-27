@@ -218,60 +218,73 @@ header {
 }
 
 .creation__items {
+  width: 100%;
   height: 115px;
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
 }
-.creation__items:nth-of-type(1) {
+
+.creation__items::after {
+  content: "";
+  position: absolute;
+  width: 87%;
+  height: 115px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: -1;
+}
+
+.creation__items:nth-of-type(1)::after {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url("../images/mobile/image-deep-earth.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
-.creation__items:nth-of-type(2) {
+
+.creation__items:nth-of-type(2)::after {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url("../images/mobile/image-night-arcade.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
-.creation__items:nth-of-type(3) {
+
+.creation__items:nth-of-type(3)::after {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url("../images/mobile/image-soccer-team.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
-.creation__items:nth-of-type(4) {
+
+.creation__items:nth-of-type(4)::after {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url("../images/mobile/image-grid.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
-.creation__items:nth-of-type(4) .creation__items-title {
-  padding: 0 50px 20px 20px;
-}
-.creation__items:nth-of-type(5) {
+
+.creation__items:nth-of-type(5)::after {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url("../images/mobile/image-from-above.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
-.creation__items:nth-of-type(6) {
+
+.creation__items:nth-of-type(6)::after {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url("../images/mobile/image-pocket-borealis.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
-.creation__items:nth-of-type(7) {
+
+.creation__items:nth-of-type(7)::after {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url("../images/mobile/image-curiosity.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
-.creation__items:nth-of-type(8) {
+
+.creation__items:nth-of-type(8)::after {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url("../images/mobile/image-fisheye.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
-.creation__items:hover {
-  filter: contrast(30%) brightness(130%);
-}
-.creation__items:hover .creation__items-title {
-  filter: contrast(30%) brightness(130%);
-  color: black;
+
+.creation__items:hover:after {
+  filter: contrast(30%) brightness(180%);
 }
 
 .creation__items-title {
@@ -282,16 +295,85 @@ header {
   text-transform: uppercase;
   text-align: left;
   line-height: 1em;
-  padding: 0 10px 20px 20px;
-  width: 50%;
+  width: 100%;
+  height: 100%;
+  padding: 50px 170px 5px 15px;
 }
-@media (max-width: 265px) {
-  .creation__items-title {
-    font-size: 1em;
-    line-height: 1.3em;
-  }
+.creation__items-title:hover {
+  color: black;
 }
 
+.creation__items:nth-of-type(4) .creation__items-title {
+  padding-right: 290px;
+}
+
+/*.creation__items
+ *  height: 115px
+ *  display: flex
+ *  align-items: flex-end
+ *  justify-content: flex-start
+ *  &:nth-of-type(1)
+ *      background: 
+ *          image: linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0)), url('../images/mobile/image-deep-earth.jpg')
+ *          size: cover
+ *          repeat: no-repeat
+ *  &:nth-of-type(2)
+ *      background: 
+ *          image: linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0)), url('../images/mobile/image-night-arcade.jpg')
+ *          size: cover
+ *          repeat: no-repeat
+ *  &:nth-of-type(3)
+ *      background: 
+ *          image: linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0)), url('../images/mobile/')
+ *          size: cover
+ *          repeat: no-repeat
+ *  &:nth-of-type(4)
+ *      background: 
+ *          image: linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0)), url('../images/mobile/')
+ *          size: cover
+ *          repeat: no-repeat
+ *      .creation__items-title
+ *          padding: 0 50px 20px 20px
+ *  &:nth-of-type(5)
+ *      background: 
+ *          image: linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0)), url('../images/mobile/)
+ *          size: cover
+ *          repeat: no-repeat
+ *  &:nth-of-type(6)
+ *      background: 
+ *          image: linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0)), url('../images/mobile/)
+ *          size: cover
+ *          repeat: no-repeat
+ *  &:nth-of-type(7)
+ *      background: 
+ *          image: linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0)), url('../images/mobile/)
+ *          size: cover
+ *          repeat: no-repeat
+ *  &:nth-of-type(8)
+ *      background: 
+ *          image: linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0)), url('../images/mobile/)
+ *          size: cover
+ *          repeat: no-repeat
+ *  &:hover
+ *      filter: contrast(30%) brightness(130%)
+ *      .creation__items-title
+ *          &:hover
+ *              color: black  */
+/*.creation__items-title
+ *  color: $white
+ *  font:
+ *      family: $second-font
+ *      size: 1.4em
+ *      weight: 300
+ *  text-transform: uppercase
+ *  text-align: left
+ *  line-height: 1em
+ *  padding: 0 10px 20px 20px
+ *  position: absolute
+ *  width: 50%
+ *  @media(max-width: 265px)
+ *      font-size: 1em
+ *      line-height: 1.3em  */
 .creation__see-button {
   background: hsl(0, 0%, 100%);
   border: 2px solid hsl(0, 0%, 0%);
