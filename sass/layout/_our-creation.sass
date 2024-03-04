@@ -1,5 +1,14 @@
 .creation__wrapper
     text-align: center
+    margin: 0 25px 80px
+    @media (min-width: 500px)
+        margin: 0 60px 100px
+    @media (min-width: 800px)
+        margin: 0 70px 120px
+    @media (min-width: 1300px)
+        margin: 0 160px 160px
+    @media (min-width: 1440px)
+        margin: 40px 165px 165px
 
 .creation__title
     font:
@@ -12,17 +21,20 @@
         font-size: 1.3em
         line-height: 1.3em
     @media (min-width: 800px)
-        font-size: 1.5em
-    @media (min-width: 1100px)
         font-size: 1.8em
+    @media (min-width: 1000px)
+        text-align: left
+        font-size: 2.2em
+        margin-bottom: 0
     @media (min-width: 1400px)
-        font-size: 2.5em
-
+        font-size: 2.9em
+    @media (min-width: 1440px)
+        font-size: 3em
+    
 .creation__items-container
     display: grid
     grid-template-columns: 1fr
     grid-template-rows: repeat(8, 1fr)
-    padding: 0 22px
     row-gap: 15px
     margin-bottom: 30px
     a
@@ -38,11 +50,8 @@
         background: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0))
         z-index: 1 
         @media (min-width: 1000px)
-            background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0))
-    @media (min-width: 500px)
-        padding: 0 80px
+            background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0))
     @media (min-width: 700px)
-        padding: 0 60px
         grid-template-columns: 1fr 1fr
         grid-template-rows: repeat(4, 1fr)
         row-gap: 20px
@@ -51,6 +60,7 @@
     @media (min-width: 1000px)
         grid-template-columns: repeat(4, 1fr)
         grid-template-rows: repeat(2, 1fr)
+    
         
 .creation-image
     max-width: 100%
@@ -61,53 +71,48 @@
     color: $white
     font:
         family: $second-font
-        size: 1.4em
+        size: 1em
         weight: 300
     text-transform: uppercase
     text-align: left
     line-height: 1em
     padding-left: 19px
     position: absolute
-    transform: translateY(-72px)
+    transform: translateY(-52px)
     width: 40%
     z-index: 2
     &:hover
         color: black
     @media (max-width: 285px)
-        font-size: 1.1em
+        font-size: .8em
         transform: translateY(-50px)
     @media (max-width: 270px)
         font-size: .9em
     @media (min-width: 700px)
-        font-size: 1em
+        font-size: 1.1em
         width: 30%
         transform: translateY(-55px)
     @media (min-width: 800px)
         font-size: 1.2em
         width: 28%
         line-height: 1.2em
-        transform: translateY(-60px)
+        transform: translateY(-70px)
         padding-left: 40px
     @media (min-width: 1000px)
         width: 15%
-        transform: translateY(-80px)
+        transform: translateY(-85px)
         padding-left: 20px
     @media (min-width: 1200px)
         font-size: 1.4em
-    @media (min-width: 1400px)
+    @media (min-width: 1300px)
         font-size: 1.6em
-
-
-.creation__items:nth-of-type(4) .creation__items-title
-    width: 30%
-    @media (min-width: 800px)
-        width: 20%
-    @media (min-width: 1000px)
-        width: 10%
-
-.creation__items:nth-of-type(1) .creation__items-title
-    @media (min-width: 1000px)
-        width: 10%
+        padding-left: 35px
+        transform: translateY(-100px)
+    @media (min-width: 1440px)
+        font-size: 1.65em
+        padding-left: 44px
+        transform: translateY(-105px)
+        line-height: 1em
 
 .creation__see-button
     background: $white
@@ -116,7 +121,35 @@
     text-transform: uppercase
     letter-spacing: 4px
     padding: 7px 35px 
-    margin-bottom: 100px
     &:hover
         background: $black
         color: $white
+
+.bottom-btn
+    @media (min-width: 1000px)
+        display: none
+
+.top-btn
+    display: none
+    @media (min-width: 1000px)
+        display: block
+        font-size: .7em
+        padding: 5px 27px 
+        border: 1px solid $black
+    @media (min-width: 1400px)
+        font-size: .9em
+        padding: 8px 30px
+    @media (min-width: 1440px)
+        font-size: 1em
+        padding: 8px 40px
+
+.creation-title__container
+    @media (min-width: 1000px)
+        display: flex
+        justify-content: space-between
+        align-items: baseline
+        margin-bottom: 40px
+    @media (min-width: 1440px)
+        margin-bottom: 70px
+    
+

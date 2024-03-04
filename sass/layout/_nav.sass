@@ -12,13 +12,11 @@
     transition: all ease-in-out 250ms
     @media (min-width: 800px)
         opacity: 100%
-        left: 50%
-        width: 40%
-        background: none
+        position: static
+        width: auto
         height: auto
-        margin: 35px 30px 0 0
-    @media (min-width: 1400px)
-        margin: 50px 30px 0 0 
+        background: none
+        align-self: center
     ul
         gap: 12px
         width: 100%
@@ -32,8 +30,10 @@
             justify-content: flex-end
             gap: 24px
             padding: 0
+        @media (min-width: 1300px)
+            gap: 27px
         @media (min-width: 1400px)
-            gap: 30px
+            gap: 28px
         li
             a
                 color: $white
@@ -44,13 +44,17 @@
                 @media (min-width: 800px)
                     font:
                         family: $main-font
-                        size: .75em
+                        size: .6em
                         weight: 400
                     text-transform: none
                     &:hover
                         border-bottom: 2px solid $white
-                @media (min-width: 1400px)
+                @media (min-width: 1000px)
+                    font-size: .8em
+                @media (min-width: 1300px)
                     font-size: .9em
+                @media (min-width: 1400px)
+                    font-size: 1em
     &.is-open
         left: 0
         width: 100%
@@ -86,5 +90,4 @@
     &::before
         opacity: 0
 
-    
     

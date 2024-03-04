@@ -14,7 +14,7 @@ $(function() {
             'filter' : 'contrast(50%) brightness(160%)'
         });
 
-        $(this).next().css({
+        $(this).next().children().css({
             'color' :  'black'
         });
 
@@ -25,7 +25,7 @@ $(function() {
             'filter' : 'none'
         });
 
-        $(this).next().css({
+        $(this).next().children().css({
             'color' : 'white'
         })
 
